@@ -54,6 +54,7 @@
       rtsJs.backToTopInit();
       rtsJs.stickyHeader();
       rtsJs.galleryPopUpmag();
+      rtsJs.taskGalleryLightbox();
       rtsJs.gsapAnimationImageScale();
       rtsJs.radialProgress();
     },
@@ -1329,6 +1330,44 @@
       });
     },
 
+    taskGalleryLightbox: function () {
+      $(document).ready(function () {
+        var $lightbox = $('#taskGalleryLightbox');
+        if (!$lightbox.length) {
+          return;
+        }
+        var $image = $lightbox.find('img');
+        var $close = $lightbox.find('.task-gallery-close');
+
+        var hideLightbox = function () {
+          $lightbox.removeClass('active');
+          $image.attr('src', '');
+        };
+
+        window.showImage = function (trigger) {
+          var src = $(trigger).attr('data-img');
+          if (!src) {
+            return;
+          }
+          $image.attr('src', src);
+          $lightbox.addClass('active');
+        };
+
+        $close.on('click', hideLightbox);
+        $lightbox.on('click', function (event) {
+          if (event.target === this) {
+            hideLightbox();
+          }
+        });
+
+        $(document).on('keydown', function (event) {
+          if (event.key === 'Escape' && $lightbox.hasClass('active')) {
+            hideLightbox();
+          }
+        });
+      });
+    },
+
     gsapAnimationImageScale: function (e) {
       $(document).ready(function () {
         gsap.registerPlugin(ScrollTrigger);
@@ -1467,18 +1506,15 @@
 
 
 // PROGRESS BAR JS
+document.addEventListener("DOMContentLoaded",function(){
 
-			window.addEventListener("load", function(){
+const bars=document.querySelectorAll(".custom-progress");
 
-document.querySelectorAll(".progress-fill").forEach(function(bar){
-
-let width = bar.getAttribute("data-width");
-
-setTimeout(function(){
-bar.style.width = width + "%";
+bars.forEach(bar=>{
+let width=bar.getAttribute("data-width");
+setTimeout(()=>{
+bar.style.width=width+"%";
 },300);
-
 });
 
 });
-
