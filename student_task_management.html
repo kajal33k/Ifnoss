@@ -998,20 +998,20 @@
             </div>
 
  <!-- image pop up -->
-            <div class="container py-5">
-              <div class="row g-4">
+             <div class="container py-5 feature-gallery-section">
+              <div class="row g-4 feature-gallery-row">
 
                 <!-- Image 1 -->
-                <div class="col-lg-3 col-md-6">
+                <div class="col-md-6 col-lg-3 ">
                   <div class="position-relative">
                     <img
-                      src="/assets/testing/Ifnoss-Visitor-Dashboard.png"
+                      src="/assets/testing/Ifnoss-Student-Dashborad.png"
                       class="img-fluid rounded shadow w-100"
                       style="height:200px; object-fit:cover;"
                       alt="Image 1"
                     />
 
-                   <!-- Plus Button (centered) -->
+                    <!-- Plus Button (centered) -->
                     <button
                       type="button"
                       class="btn btn-white border position-absolute top-50 start-50 translate-middle d-flex align-items-center justify-content-center"
@@ -1019,7 +1019,7 @@
                       data-bs-toggle="modal"
                       data-bs-target="#imageModal"
                       onclick="showImage(this)"
-                      data-img="/assets/testing/Ifnoss-Visitor-Dashboard.png"
+                      data-img="/assets/testing/Ifnoss-Student-Dashborad.png"
                       aria-label="Open image 1"
                     >
                       +
@@ -1028,10 +1028,10 @@
                 </div>
 
                 <!-- Image 2 -->
-                <div class="col-lg-3 col-md-6">
+                <div class="col-md-6 col-lg-3 ">
                   <div class="position-relative">
                     <img
-                      src="/assets/testing/Ifnoss-Visitor-AddVistor.png"
+                      src="/assets/testing/Ifnoss-Student-ViewProfile.png"
                       class="img-fluid rounded shadow w-100"
                       style="height:200px; object-fit:cover;"
                       alt="Image 2"
@@ -1045,7 +1045,7 @@
                       data-bs-toggle="modal"
                       data-bs-target="#imageModal"
                       onclick="showImage(this)"
-                      data-img="assets/testing/Ifnoss-Visitor-AddVistor.png"
+                      data-img="/assets/testing/Ifnoss-Student-ViewProfile.png"
                       aria-label="Open image 2"
                     >
                       +
@@ -1053,14 +1053,14 @@
                   </div>
                 </div>
 
-                  <!-- Image 3 -->
-                <div class="col-lg-3 col-md-6">
+                  <!-- Image 3-->
+                <div class="col-md-6 col-lg-3 ">
                   <div class="position-relative">
                     <img
-                      src="/assets/testing/Ifnoss-Visitor-Dashboard.png"
+                      src="/assets/testing/Ifnoss-Student-BookSearch.png"
                       class="img-fluid rounded shadow w-100"
                       style="height:200px; object-fit:cover;"
-                      alt="Image 1"
+                      alt="Image 3"
                     />
 
                     <!-- Plus Button (centered) -->
@@ -1071,8 +1071,8 @@
                       data-bs-toggle="modal"
                       data-bs-target="#imageModal"
                       onclick="showImage(this)"
-                      data-img="/assets/testing/Ifnoss-Visitor-Dashboard.png"
-                      aria-label="Open image 1"
+                      data-img="/assets/testing/Ifnoss-Student-BookSearch.png"
+                      aria-label="Open image 3"
                     >
                       +
                     </button>
@@ -1080,13 +1080,13 @@
                 </div>
 
                 <!-- Image 4 -->
-                <div class="col-lg-3 col-md-6">
+                <div class="col-md-6 col-lg-3 ">
                   <div class="position-relative">
                     <img
-                      src="/assets/testing/Ifnoss-Visitor-AddVistor.png"
+                      src="/assets/testing/Ifnoss-Student-Assignment.png"
                       class="img-fluid rounded shadow w-100"
                       style="height:200px; object-fit:cover;"
-                      alt="Image 2"
+                      alt="Image 4"
                     />
 
                     <!-- Plus Button (centered) -->
@@ -1097,14 +1097,17 @@
                       data-bs-toggle="modal"
                       data-bs-target="#imageModal"
                       onclick="showImage(this)"
-                      data-img="assets/testing/Ifnoss-Visitor-AddVistor.png"
-                      aria-label="Open image 2"
+                      data-img="/assets/testing/Ifnoss-Student-Assignment.png"
+                      aria-label="Open image 4"
                     >
                       +
                     </button>
                   </div>
                 </div>
               </div>
+
+
+
             </div>
 
            <div class="title-style-five">
@@ -1143,10 +1146,7 @@
                           <img src="https://img.icons8.com/?size=100&id=42234&format=png&color=FA5252" alt="" class="" style="height: 24px; width: 24px;">
                        Syllabus
                     </li>
-                    <li>
-                          <img src="https://img.icons8.com/?size=100&id=42234&format=png&color=FA5252" alt="" class="" style="height: 24px; width: 24px;">
-                      Attendance
-                    </li>
+                   
                      <li>
                           <img src="https://img.icons8.com/?size=100&id=42234&format=png&color=FA5252" alt="" class="" style="height: 24px; width: 24px;">
                  Assignments
@@ -1576,7 +1576,7 @@
               <a href="about.html" class="main" aria-expanded="false">About</a>
               <ul class="submenu mm-collapse">
                 <li><a href="about.html">About</a></li>
-                <li><a href="about.html">Ifnoss Education Software</a></li>
+                <li><a href="about.html">IFNOSS Education Software</a></li>
                 <li><a href="delivery_moel.html">Delivery Model</a></li>
                 <li>
                   <a href="system_requirement.html">System Requirement</a>
@@ -1685,6 +1685,29 @@
     </div>
     <!-- progress area end -->
 
+    <div
+      id="featureLightbox"
+      class="feature-lightbox-overlay"
+      aria-hidden="true"
+    >
+      <div
+        class="feature-lightbox-card"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Feature preview"
+      >
+        <button
+          type="button"
+          class="feature-lightbox-close"
+          aria-label="Close preview"
+        >
+          &times;
+        </button>
+        <img src="" alt="Feature preview" />
+        <p class="feature-lightbox-caption" aria-live="polite"></p>
+      </div>
+    </div>
+
     <script defer src="assets/js/plugins/jquery.js"></script>
 
     <script defer src="assets/js/plugins/odometer.js"></script>
@@ -1702,87 +1725,5 @@
     <script defer src="assets/js/plugins/contact.form.js"></script>
 
     <script defer src="assets/js/main.js"></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        var toggleBtn = document.getElementById('toggleFeatureDetails');
-        var details = document.getElementById('featureDetails');
-        if (toggleBtn && details) {
-          toggleBtn.textContent = 'Features';
-          toggleBtn.setAttribute('aria-expanded', 'false');
-          details.style.display = 'none';
-
-          var toggleDetails = function () {
-            var isHidden = details.style.display === 'none' || details.style.display === '';
-            if (isHidden) {
-              details.style.display = 'block';
-              toggleBtn.textContent = 'Features';
-              toggleBtn.setAttribute('aria-expanded', 'true');
-            } else {
-              details.style.display = 'none';
-              toggleBtn.textContent = 'Features';
-              toggleBtn.setAttribute('aria-expanded', 'false');
-            }
-          };
-
-          toggleBtn.addEventListener('click', toggleDetails);
-        }
-
-        var lightbox = document.getElementById('featureLightbox');
-        var lightboxImage = lightbox ? lightbox.querySelector('img') : null;
-        var lightboxCaption = lightbox ? lightbox.querySelector('.feature-lightbox-caption') : null;
-        var lightboxClose = lightbox ? lightbox.querySelector('.feature-lightbox-close') : null;
-
-        window.showImage = function (trigger) {
-          if (!lightbox || !lightboxImage) {
-            return;
-          }
-          var src = trigger.getAttribute('data-img');
-          if (!src) {
-            return;
-          }
-
-          lightboxImage.src = src;
-          lightboxImage.alt = trigger.getAttribute('aria-label') || 'Feature preview';
-          if (lightboxCaption) {
-            lightboxCaption.textContent =
-              trigger.getAttribute('data-caption') || trigger.getAttribute('aria-label') || '';
-          }
-          lightbox.classList.add('active');
-          lightbox.setAttribute('aria-hidden', 'false');
-          if (lightboxClose) {
-            lightboxClose.focus();
-          }
-        };
-
-        var hideLightbox = function () {
-          if (!lightbox) {
-            return;
-          }
-          lightbox.classList.remove('active');
-          lightbox.setAttribute('aria-hidden', 'true');
-          if (lightboxImage) {
-            lightboxImage.removeAttribute('src');
-          }
-        };
-
-        if (lightboxClose) {
-          lightboxClose.addEventListener('click', hideLightbox);
-        }
-
-        if (lightbox) {
-          lightbox.addEventListener('click', function (event) {
-            if (event.target === lightbox) {
-              hideLightbox();
-            }
-          });
-        }
-
-        document.addEventListener('keydown', function (event) {
-          if (event.key === 'Escape' && lightbox && lightbox.classList.contains('active')) {
-            hideLightbox();
-          }
-        });
-      });
-    </script>
   </body>
 </html>

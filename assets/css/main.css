@@ -711,3 +711,50 @@ box-shadow:0 8px 15px rgba(0,0,0,0.2);
 .read-more-btn:hover {
   color: #040c5a;
 }
+
+/* qoutes form */
+
+                        .form-control, .form-select {
+                            border-radius:8px;
+                            padding:12px;
+                            border:1px solid #dcdcdc;
+                        }
+                        .form-control:focus, .form-select:focus {
+                            border-color:#0B3D91;
+                            box-shadow:0 0 0 2px rgba(11,61,145,0.15);
+                        }
+                        label {
+                            font-weight:600;
+                            color:#333;
+                            margin-bottom:6px;
+                        }
+         
+/* icons-social-media */
+.icon-hovver:hover i {
+  transform: scale(1.1);
+}
+.icon-hovver:hover {
+  background:#ca5454 !important;
+}
+
+
+
+            .form-control {
+              padding:12px;
+              border-radius:8px;
+              border:1px solid #ddd;
+              font-size:14px;
+            }
+            .form-control:focus {
+              border-color:#0B3D91;
+              box-shadow:0 0 0 2px rgba(11,61,145,0.1);
+            }
+            .form-label {
+              font-weight:600;
+              font-size:14px;
+            }
+            .section-title {
+              color:#0B3D91;
+              font-weight:700;
+              margin-bottom:20px;
+            }

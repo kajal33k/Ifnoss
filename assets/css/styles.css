@@ -7720,11 +7720,11 @@ Copyright (c) 2015 Daniel Eden
   font-size: 14px;
 }
 
-.has-dropdown.mega-menu > a::after {
+/* .has-dropdown.mega-menu > a::after {
   position: absolute;
   content: "";
   /* \f078 */
-  right: -22px;
+  /* right: -22px;
   top: 53%;
   transform: translateY(-50%);
   font-weight: 400;
@@ -7732,7 +7732,7 @@ Copyright (c) 2015 Daniel Eden
   font-family: "Font Awesome 6 Pro";
   font-weight: 300;
   font-size: 14px;
-}
+} */ 
 
 .nav-area ul li.main-nav {
   padding: 40px 0;
@@ -23428,6 +23428,42 @@ body.contact-page .rts-breadcrumb-area .title-area-left {
   margin-bottom: 10px !important;
 }
 
+.quote-contact-section {
+  background: #f4f7fb;
+  padding-block: 4rem;
+}
+
+.quote-form-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 36px;
+  box-shadow: 0 35px 55px rgba(5, 6, 30, 0.08);
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.quote-form-card .form-control,
+.quote-form-card .form-select,
+.quote-form-card textarea {
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+}
+
+.quote-form-card .form-control:focus,
+.quote-form-card .form-select:focus,
+.quote-form-card textarea:focus {
+  border-color: #0b3d91;
+  box-shadow: 0 0 0 2px rgba(11, 61, 145, 0.1);
+}
+
+.quote-form-card .form-label {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 0.5rem;
+}
+
 .full-grid .ordered-product table {
   width: 100%;
 }
@@ -32056,15 +32092,21 @@ header.header-transparent.in-full-screen .action-area .menu-btn {
   position: fixed;
   inset: 0;
   background: rgba(7, 10, 25, 0.85);
-  display: none;
+  display: flex;
   z-index: 2000;
   align-items: center;
   justify-content: center;
   padding: 1.5rem;
   backdrop-filter: blur(6px);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
 }
 .feature-lightbox-overlay.active {
-  display: flex;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 .feature-lightbox-card {
   position: relative;

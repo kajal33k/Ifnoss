@@ -153,10 +153,10 @@
 ==============================================  */
 /* Default  */
 :root {
-  --color-primary: #308b48;
+  --color-primary: #0f2069;
   --color-secondary: #0995cc;
   --color-blue: #0b4df5;
-  --color-sky: #82b440;
+  --color-sky: #102c86;
   --color-body: #5D666F;
   --color-heading-1: #163986;
   --color-title: #f7f7ff;
@@ -167,7 +167,7 @@
   --color-border: #DDD8F9;
   --border-width: 1px;
   --radius: 10px;
-  --color-success: #3EB75E;
+  --color-success: #0f0d74;
   --color-danger: #FF0003;
   --color-warning: #FF8F3C;
   --color-info: #1BA2DB;
@@ -6830,7 +6830,7 @@ Copyright (c) 2015 Daniel Eden
   font-size: 14px;
 }
 
-.has-dropdown.mega-menu > a::after {
+/* .has-dropdown.mega-menu > a::after {
   position: absolute;
   content: "\f078";
   right: -22px;
@@ -6841,7 +6841,7 @@ Copyright (c) 2015 Daniel Eden
   font-family: "Font Awesome 6 Pro";
   font-weight: 300;
   font-size: 14px;
-}
+} */
 
 .nav-area ul li.main-nav {
   padding: 10px 0;

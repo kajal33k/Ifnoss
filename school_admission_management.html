@@ -1015,7 +1015,7 @@
                 <div class="col-md-6 col-lg-3 ">
                   <div class="position-relative">
                     <img
-                      src="/assets/testing/Ifnoss-Visitor-Dashboard.png"
+                      src="/assets/testing/Ifnoss-Registry-Dashboard.png"
                       class="img-fluid rounded shadow w-100"
                       style="height:200px; object-fit:cover;"
                       alt="Image 1"
@@ -1029,7 +1029,7 @@
                       data-bs-toggle="modal"
                       data-bs-target="#imageModal"
                       onclick="showImage(this)"
-                      data-img="/assets/testing/Ifnoss-Visitor-Dashboard.png"
+                      data-img="/assets/testing/Ifnoss-Registry-Dashboard.png"
                       aria-label="Open image 1"
                     >
                       +
@@ -1041,7 +1041,7 @@
                 <div class="col-md-6 col-lg-3 ">
                   <div class="position-relative">
                     <img
-                      src="/assets/testing/Ifnoss-Visitor-AddVistor.png"
+                      src="/assets/testing/Ifnoss-Registry-StudentList.png"
                       class="img-fluid rounded shadow w-100"
                       style="height:200px; object-fit:cover;"
                       alt="Image 2"
@@ -1055,7 +1055,7 @@
                       data-bs-toggle="modal"
                       data-bs-target="#imageModal"
                       onclick="showImage(this)"
-                      data-img="assets/testing/Ifnoss-Visitor-AddVistor.png"
+                      data-img="assets/testing/Ifnoss-Registry-StudentList.png"
                       aria-label="Open image 2"
                     >
                       +
@@ -1067,7 +1067,7 @@
                 <div class="col-md-6 col-lg-3 ">
                   <div class="position-relative">
                     <img
-                      src="/assets/testing/Ifnoss-Visitor-Dashboard.png"
+                      src="/assets/testing/Ifnoss-Registry-Student-AddNew.png"
                       class="img-fluid rounded shadow w-100"
                       style="height:200px; object-fit:cover;"
                       alt="Image 3"
@@ -1081,7 +1081,7 @@
                       data-bs-toggle="modal"
                       data-bs-target="#imageModal"
                       onclick="showImage(this)"
-                      data-img="/assets/testing/Ifnoss-Visitor-Dashboard.png"
+                      data-img="/assets/testing/Ifnoss-Registry-Student-AddNew.png"
                       aria-label="Open image 3"
                     >
                       +
@@ -1093,7 +1093,7 @@
                 <div class="col-md-6 col-lg-3 ">
                   <div class="position-relative">
                     <img
-                      src="/assets/testing/Ifnoss-Visitor-AddVistor.png"
+                      src="/assets/testing/Ifnoss-Registry-Cohort-Overview.png"
                       class="img-fluid rounded shadow w-100"
                       style="height:200px; object-fit:cover;"
                       alt="Image 4"
@@ -1107,7 +1107,7 @@
                       data-bs-toggle="modal"
                       data-bs-target="#imageModal"
                       onclick="showImage(this)"
-                      data-img="assets/testing/Ifnoss-Visitor-AddVistor.png"
+                      data-img="assets/testing/Ifnoss-Registry-Cohort-Overview.png"
                       aria-label="Open image 4"
                     >
                       +
@@ -1714,7 +1714,7 @@
               <a href="about.html" class="main" aria-expanded="false">About</a>
               <ul class="submenu mm-collapse">
                 <li><a href="about.html">About</a></li>
-                <li><a href="about.html">Ifnoss Education Software</a></li>
+                <li><a href="about.html">IFNOSS Education Software</a></li>
                 <li><a href="delivery_moel.html">Delivery Model</a></li>
                 <li>
                   <a href="system_requirement.html">System Requirement</a>
@@ -1840,87 +1840,6 @@
     <script defer src="assets/js/plugins/contact.form.js"></script>
 
     <script defer src="assets/js/main.js"></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        var toggleBtn = document.getElementById('toggleFeatureDetails');
-        var details = document.getElementById('featureDetails');
-        if (toggleBtn && details) {
-          toggleBtn.textContent = 'Features';
-          toggleBtn.setAttribute('aria-expanded', 'false');
-          details.style.display = 'none';
-
-          var toggleDetails = function () {
-            var isHidden = details.style.display === 'none' || details.style.display === '';
-            if (isHidden) {
-              details.style.display = 'block';
-              toggleBtn.textContent = 'Features';
-              toggleBtn.setAttribute('aria-expanded', 'true');
-            } else {
-              details.style.display = 'none';
-              toggleBtn.textContent = 'Features';
-              toggleBtn.setAttribute('aria-expanded', 'false');
-            }
-          };
-
-          toggleBtn.addEventListener('click', toggleDetails);
-        }
-
-        var lightbox = document.getElementById('featureLightbox');
-        var lightboxImage = lightbox ? lightbox.querySelector('img') : null;
-        var lightboxCaption = lightbox ? lightbox.querySelector('.feature-lightbox-caption') : null;
-        var lightboxClose = lightbox ? lightbox.querySelector('.feature-lightbox-close') : null;
-
-        window.showImage = function (trigger) {
-          if (!lightbox || !lightboxImage) {
-            return;
-          }
-          var src = trigger.getAttribute('data-img');
-          if (!src) {
-            return;
-          }
-
-          lightboxImage.src = src;
-          lightboxImage.alt = trigger.getAttribute('aria-label') || 'Feature preview';
-          if (lightboxCaption) {
-            lightboxCaption.textContent =
-              trigger.getAttribute('data-caption') || trigger.getAttribute('aria-label') || '';
-          }
-          lightbox.classList.add('active');
-          lightbox.setAttribute('aria-hidden', 'false');
-          if (lightboxClose) {
-            lightboxClose.focus();
-          }
-        };
-
-        var hideLightbox = function () {
-          if (!lightbox) {
-            return;
-          }
-          lightbox.classList.remove('active');
-          lightbox.setAttribute('aria-hidden', 'true');
-          if (lightboxImage) {
-            lightboxImage.removeAttribute('src');
-          }
-        };
-
-        if (lightboxClose) {
-          lightboxClose.addEventListener('click', hideLightbox);
-        }
-
-        if (lightbox) {
-          lightbox.addEventListener('click', function (event) {
-            if (event.target === lightbox) {
-              hideLightbox();
-            }
-          });
-        }
-
-        document.addEventListener('keydown', function (event) {
-          if (event.key === 'Escape' && lightbox && lightbox.classList.contains('active')) {
-            hideLightbox();
-          }
-        });
-      });
-    </script>
+    
   </body>
 </html>
