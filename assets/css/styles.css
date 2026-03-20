@@ -8134,7 +8134,7 @@ header .main-nav > a {
   color: var(--color-primary);
 }
 .home-violet .rts-sidebar-menu-desktop .body-mobile .mainmenu li.has-droupdown > a::before {
-  content: "\f078" !important;
+  content: " " !important;
   right: 10px;
 }
 .home-violet .rts-sidebar-menu-desktop .body-mobile .mainmenu li.has-droupdown .submenu::after {
