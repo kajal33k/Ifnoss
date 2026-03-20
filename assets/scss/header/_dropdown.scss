@@ -302,7 +302,7 @@ header .nav-area ul li.main-nav {
     &:hover {
         &>a {
             &::after {
-                content: "\f077";
+                content: " ";
                 color: var(--color-primary);
             }
         }

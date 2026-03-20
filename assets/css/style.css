@@ -6819,7 +6819,7 @@ Copyright (c) 2015 Daniel Eden
 
 .has-dropdown::after {
   position: absolute;
-  content: "\f078";
+  content: " ";
   right: -22px;
   top: 51%;
   transform: translateY(-50%);
@@ -7188,9 +7188,6 @@ header .main-nav > a {
 .rts-sidebar-menu-desktop .body-mobile .mainmenu-nav .mainmenu li a.open {
   color: var(--color-primary);
 }
-.rts-sidebar-menu-desktop .body-mobile .mainmenu li.has-droupdown > a.open::before {
-  content: "\f077" !important;
-}
 .rts-sidebar-menu-desktop .body-mobile .mainmenu li.has-droupdown .submenu::after {
   display: none;
 }
@@ -7252,9 +7249,6 @@ header .main-nav > a {
 .home-violet .rts-sidebar-menu-desktop .body-mobile .mainmenu li.has-droupdown > a::before {
   content: "\f078" !important;
   right: 10px;
-}
-.home-violet .rts-sidebar-menu-desktop .body-mobile .mainmenu li.has-droupdown > a.open::before {
-  content: "\f077" !important;
 }
 .home-violet .rts-sidebar-menu-desktop .body-mobile .mainmenu li.has-droupdown .submenu::after {
   display: none;
@@ -7487,9 +7481,6 @@ header .main-nav > a {
   background: transparent !important;
   pointer-events: none;
   cursor: pointer;
-}
-.mobile-menu nav ul li.has-droupdown.mm-active::after {
-  content: "\f077";
 }
 .mobile-menu nav ul li.has-droupdown.third-lvl::after {
   font-size: 10px;
@@ -7799,10 +7790,6 @@ li.has-dropdown:hover .submenu {
   transform: translateY(0);
   transform: scaleY(1);
 }
-li.has-dropdown:hover::after {
-  content: "\f077";
-}
-
 .has-dropdown.mega-menu::after {
   display: none;
 }
@@ -7987,10 +7974,6 @@ header .nav-area ul li.main-nav:hover::after {
   transform: translateX(-50%) scaleY(1);
 }
 
-.has-dropdown.mega-menu:hover > a::after {
-  content: "\f077";
-  color: var(--color-primary);
-}
 
 .appoinment-area-main.contact-page {
   border-radius: 10px;
@@ -8088,11 +8071,6 @@ header.header-three .rts-mega-menu.service-mega-menu-style {
 header .menu-item-open > a {
   color: var(--color-primary) !important;
 }
-header .menu-item-open > a::after {
-  content: "\f077" !important;
-  color: var(--color-primary) !important;
-}
-
 header .menu-item-open.project-a-after > a::after {
   display: none;
 }

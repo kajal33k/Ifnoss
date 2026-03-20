@@ -309,7 +309,6 @@ display:none;
     height:70px;
     margin:auto;
     border-radius:50%;
-    background:linear-gradient(135deg,#2829286c,#31303077);
     display:flex;
     align-items:center;
     justify-content:center;
@@ -317,7 +316,7 @@ display:none;
 }
 
 .feature-icon i{
-    color:#fff;
+    
     font-size:26px;
 }
 
@@ -1247,7 +1246,6 @@ display:none;
     width:46px;
     height:46px;
     border-radius:12px;
-    background:linear-gradient(135deg,#1469d8,#1b5deb);
     display:flex;
     align-items:center;
     justify-content:center;
@@ -1255,7 +1253,7 @@ display:none;
 }
 
 .feature-icon i{
-    color:#fff;
+    
     font-size:18px;
 }
 
@@ -1411,7 +1409,6 @@ display:flex;
 align-items:center;
 justify-content:center;
 border-radius:12px;
-background:#d6d7d84b;
 font-size:22px;
 }
 
@@ -7705,12 +7702,12 @@ Copyright (c) 2015 Daniel Eden
 .has-dropdown.mega-menu > a {
   position: relative;
 }
-
+/* 
 .has-dropdown::after {
   position: absolute;
   content: "";  
   /* \f078 */
-  right: -22px;
+  /* right: -22px;
   top: 51%;
   transform: translateY(-50%);
   font-weight: 400;
@@ -7718,7 +7715,7 @@ Copyright (c) 2015 Daniel Eden
   font-family: "Font Awesome 6 Pro";
   font-weight: 300;
   font-size: 14px;
-}
+} */ 
 
 /* .has-dropdown.mega-menu > a::after {
   position: absolute;
@@ -8078,9 +8075,6 @@ header .main-nav > a {
 .rts-sidebar-menu-desktop .body-mobile .mainmenu-nav .mainmenu li a.open {
   color: var(--color-primary);
 }
-.rts-sidebar-menu-desktop .body-mobile .mainmenu li.has-droupdown > a.open::before {
-  content: "\f077" !important;
-}
 .rts-sidebar-menu-desktop .body-mobile .mainmenu li.has-droupdown .submenu::after {
   display: none;
 }
@@ -8142,9 +8136,6 @@ header .main-nav > a {
 .home-violet .rts-sidebar-menu-desktop .body-mobile .mainmenu li.has-droupdown > a::before {
   content: "\f078" !important;
   right: 10px;
-}
-.home-violet .rts-sidebar-menu-desktop .body-mobile .mainmenu li.has-droupdown > a.open::before {
-  content: "\f077" !important;
 }
 .home-violet .rts-sidebar-menu-desktop .body-mobile .mainmenu li.has-droupdown .submenu::after {
   display: none;
@@ -8378,9 +8369,6 @@ header .main-nav > a {
   pointer-events: none;
   cursor: pointer;
 }
-.mobile-menu nav ul li.has-droupdown.mm-active::after {
-  content: "\f077";
-}
 .mobile-menu nav ul li.has-droupdown.third-lvl::after {
   font-size: 10px;
   padding: 3px 10px;
@@ -8429,7 +8417,6 @@ header .main-nav > a {
 }
 .header-one .main-nav-desk nav ul li.has-droupdown .submenu.inner-page .sub-dropdown::after {
   position: absolute;
-  content: "\f105";
   font-family: "Font Awesome 6 Pro" !important;
   font-size: 16px;
   right: 25px;
@@ -8452,7 +8439,7 @@ header .main-nav > a {
 }
 .header-three .main-nav-desk nav ul li.has-droupdown .submenu.inner-page .sub-dropdown::after {
   position: absolute;
-  content: "\f105";
+
   font-family: "Font Awesome 6 Pro" !important;
   font-size: 16px;
   right: 25px;
@@ -8523,7 +8510,7 @@ header.heder-two .sub-dropdown:hover .submenu.third-lvl.base {
 }
 header.heder-two .sub-dropdown::after {
   position: absolute;
-  content: "\f105";
+
   font-family: "Font Awesome 6 Pro" !important;
   font-size: 16px;
   right: 20px;
@@ -8550,7 +8537,7 @@ header.header-three .sub-dropdown:hover .submenu.third-lvl.base {
 }
 header.header-three .sub-dropdown::after {
   position: absolute;
-  content: "\f105";
+
   font-family: "Font Awesome 6 Pro" !important;
   font-size: 16px;
   right: 10px;
@@ -8713,7 +8700,7 @@ color:#1C2539;
   filter: brightness(0) saturate(100%) invert(46%) sepia(55%) saturate(5974%) hue-rotate(228deg) brightness(98%) contrast(103%);
 }
 .rts-btn.btn-primary.border.bg-transparent:hover {
-  background: var(--color-primary) !important;
+  background: #0B3D91 !important;
   color: #fff;
 }
 .rts-btn.btn-primary.border.bg-transparent:hover img {
@@ -8885,7 +8872,6 @@ header .nav-area ul li.main-nav:hover::after {
 
 .has-dropdown.mega-menu:hover > a::after {
   content: "";
-  /* \f077 */
   color: var(--color-primary);
 }
 
@@ -8985,13 +8971,28 @@ header.header-three .rts-mega-menu.service-mega-menu-style {
 header .menu-item-open > a {
   color: var(--color-primary) !important;
 }
-header .menu-item-open > a::after {
-  content: "\f077" !important;
-  color: var(--color-primary) !important;
-}
-
 header .menu-item-open.project-a-after > a::after {
   display: none;
+}
+
+/* keep dropdown arrows hidden and the main links blue on hover */
+header .menu-item-open::after,
+header .menu-item-open > a::after,
+header li.has-dropdown::after,
+header li.has-dropdown:hover::after,
+header .has-dropdown::after,
+header .has-dropdown.mega-menu::after {
+  display: none !important;
+  content: none !important;
+}
+
+header .nav-area ul li a:hover,
+header .nav-area ul li a:focus,
+header .main-nav ul li a:hover,
+header .main-nav ul li a:focus,
+header .nav-area li.has-dropdown a:hover,
+header .nav-area li.has-dropdown a:focus {
+  color: #0B3D91 !important;
 }
 
 .menu-item-open::after {
@@ -14116,7 +14117,7 @@ section.main-wrapper-sticky .sticky-statement.narrow .left-side img {
   --color-primary: var(--color-blue);
 }
 .primary-blue .rts-btn.btn-primary {
-  background: var(--color-blue);
+  background: #0B3D91;
 }
 
 .primary-sky {
@@ -19531,9 +19532,6 @@ section.main-wrapper-sticky .sticky-statement.narrow .left-side img {
   transform: none;
   margin-top: -5px;
 }
-.faq-wrapper-inner-page .accordion-item .accordion-header button[aria-expanded=true]::after {
-  content: "\f077";
-}
 .faq-wrapper-inner-page .accordion-item .accordion-body {
   padding: 0 20px 20px 40px;
 }
@@ -21144,7 +21142,6 @@ section.main-wrapper-sticky .sticky-statement.narrow .left-side img {
 .progress-wrap::after {
   position: absolute;
   font-family: var(--font-3);
-  content: "\f077";
   text-align: center;
   line-height: 46px;
   font-size: 24px;
@@ -21167,13 +21164,11 @@ section.main-wrapper-sticky .sticky-statement.narrow .left-side img {
 
 .progress-wrap:hover::after {
   opacity: 1;
-  content: "\f077";
 }
 
 .progress-wrap::before {
   position: absolute;
   font-family: var(--font-3);
-  content: "\f077";
   text-align: center;
   line-height: 46px;
   font-size: 24px;
@@ -21249,7 +21244,6 @@ section.main-wrapper-sticky .sticky-statement.narrow .left-side img {
 .progress-wrap::after {
   position: absolute;
   font-family: var(--font-3);
-  content: "\f077";
   text-align: center;
   line-height: 46px;
   font-size: 24px;
@@ -21272,13 +21266,11 @@ section.main-wrapper-sticky .sticky-statement.narrow .left-side img {
 
 .progress-wrap:hover::after {
   opacity: 1;
-  content: "\f077";
 }
 
 .progress-wrap::before {
   position: absolute;
   font-family: var(--font-3);
-  content: "\f077";
   text-align: center;
   line-height: 46px;
   font-size: 24px;
